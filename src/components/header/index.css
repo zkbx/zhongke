@@ -1,0 +1,45 @@
+:local(.container){
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 8;
+}
+
+:local(.navContent){
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+:local(.logo){
+    width: 210px;
+    height: 57px;
+    margin-top: 11px;
+}
+
+:local(.container) .ant-menu-horizontal{
+    line-height: 72px;
+    border-bottom: none;
+}
+:local(.container) .ant-menu-item,.ant-menu-submenu{
+    border-top: 4px solid transparent;
+}
+:local(.container) .ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected{
+    border-bottom: none;
+    border-color: #1890ff;
+}
+
+:local(.container) .ant-menu{
+    font-size: 18px;
+}
+:local(.container) .ant-menu-horizontal .ant-menu-item, .ant-menu-horizontal .ant-menu-submenu {
+    margin-top: -1px;
+}
+
+:local(.container) .ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu{
+
+    border-bottom: none;
+}

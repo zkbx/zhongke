@@ -1,0 +1,22 @@
+:local(.footer){
+    width: 100%;
+    height: 142px;
+    background-color: #263238;
+    padding-top: 50px;
+}
+:local(.footerTitle){
+    font-size: 14px;
+    text-align: center;
+    color: #ededed;
+    display: block;
+}
+:local(.footerText){
+    font-size: 14px;
+    text-align: center;
+    color: #ededed;
+    display: block;
+    margin-top: 15px;
+}
+:local(.footerImg){
+    margin-right: 5px;
+}
