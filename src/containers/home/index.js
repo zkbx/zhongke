@@ -2,6 +2,7 @@ import React from 'react';
 import style from "./index.css"
 import Header from "../../components/header"
 import Footer from "../../components/footer"
+import { Link } from 'react-router-dom'
 
 class Home extends React.Component {
     constructor(props) {
@@ -9,13 +10,18 @@ class Home extends React.Component {
         this.state = {
 
         }
-
+        this.toTop()
+        console.log(this.props.location.pathname)
     }
 
+
+    toTop(){
+        window.scroll(0,0)
+    }
     render() {
         return (
             <div >
-                <Header />
+                <Header path={this.props.location.pathname}/>
                 <div style={{width:'100%',height:80}}></div>
                 <div className={style.banner} alt="" />
                 <div className={style.advantage}>
@@ -55,6 +61,7 @@ class Home extends React.Component {
                             </span>
                         </li>
                     </ul>
+                
                 </div>
                 <div className={style.company}>
                     <span className={style.companyTitle}>
@@ -82,7 +89,7 @@ class Home extends React.Component {
                                     拉卡拉商户收单业务是我国专业化的收单服务，交易<br />规模排名全国前三；通过完善的拉卡拉支付平台体系<br />，不断丰富、创新收单产品；致力于为商户提供专业<br />化与全方位的收单服务，全面满足国内、外银行卡的<br />收单需要。
                                 </span>
                                 <div className={style.konwMore}>
-                                    了解更多
+                                <Link to='/posCharge'>了解更多</Link>
                                 </div>
                             </div>
 
@@ -97,7 +104,7 @@ class Home extends React.Component {
                                     微信小程序依托全国10多亿微信用户，助力商户抢占<br />微信社交红利。更加垂直的行业解决方案，满足广泛<br />的业务需求——电商零售、餐饮、外卖、本地生活、<br />休闲娱乐，中科贝讯都有其完整的解决方案。
                                 </span>
                                 <div className={style.konwMore}>
-                                    了解更多
+                                <Link to='/applet'>了解更多</Link>
                                 </div>
                             </div>
                             <img src={require('./images/product2.png')} className={style.productImg} alt="" />

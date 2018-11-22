@@ -1,17 +1,22 @@
-import { Menu, Icon } from 'antd';
+import { Menu } from 'antd';
 import React from 'react';
 import style from './index.css'
-import { Link } from 'react-router-dom'
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+import { Link, } from 'react-router-dom'
+import { history} from 'react-router'
+
 
 class App extends React.Component {
-  state = {
-    current: 'mail',
+  constructor(props){
+      super(props)
+      this.state = {
+        current: 'mail',
+      }
+      console.log(this.props.path)
   }
+  
 
   handleClick = (e) => {
-    console.log('click ', e);
+    // console.log('click ', e);
     this.setState({
       current: e.key,
     });
@@ -26,24 +31,24 @@ class App extends React.Component {
 
             <Menu
               onClick={this.handleClick}
-              selectedKeys={[this.state.current]} navContent
               mode="horizontal"
               className={style.content}
+              selectedKeys={[this.props.path]}
             >
-              <Menu.Item key="8">
+              <Menu.Item key="/">
                 <Link to='/'>首页</Link>
               </Menu.Item>
 
-              <Menu.Item key="setting:1">
+              <Menu.Item key="/applet">
                 <Link to='/applet'>微信小程序</Link>
               </Menu.Item>
-              <Menu.Item key="setting:3">
+              <Menu.Item key="/posCharge">
                 <Link to='/posCharge'>Pos收单</Link>
               </Menu.Item>
-              <Menu.Item key="3">
-                关于我们
+              <Menu.Item key="/aboutUs">
+              <Link to='/aboutUs'> 关于我们</Link>
               </Menu.Item>
-              <Menu.Item key="4">
+              <Menu.Item key="/contactUs">
               <Link to='/contactUs'>联系我们</Link>
                 </Menu.Item>
             </Menu>

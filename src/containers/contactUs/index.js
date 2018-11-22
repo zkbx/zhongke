@@ -13,8 +13,12 @@ class ContactUs extends React.Component {
         this.state = {
 
         }
+        this.toTop()
     }
 
+    toTop(){
+        window.scroll(0,0)
+    }
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
@@ -28,7 +32,7 @@ class ContactUs extends React.Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <div>
-                <Header />
+                <Header  path={this.props.location.pathname}/>
                 <div style={{ width: '100%', height: 80 }}></div>
                 <div className={style.container}>
                     <div className={style.content}>
@@ -81,7 +85,7 @@ class ContactUs extends React.Component {
                                         咨询类别
                                     <FormItem style={{ display: 'inline-block', marginLeft: 15 }}>
                                             {getFieldDecorator('type', {
-                                                rules: [{ required: true, message: '请输入您的姓名!' }],
+                                                rules: [{ required: true, message: '请选择您的类别!' }],
                                             })(
 
                                                 <Select
@@ -107,7 +111,7 @@ class ContactUs extends React.Component {
 
                                 <FormItem style={{ display: 'inline-block', marginLeft: 15, flexGrow: 1 }}>
                                         {getFieldDecorator('phone', {
-                                            rules: [{ required: true, message: '请输入您的姓名!' }],
+                                            rules: [{ required: true, message: '请输入您的电话!' }],
                                         })(
 
                                             <input className={style.formInput} style={{ width: '100%' }} type="text" />

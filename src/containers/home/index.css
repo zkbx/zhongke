@@ -135,13 +135,16 @@
     height: 60px;
     background: linear-gradient(to right,#005dff,#bc4bfe);
     font-size: 22px;
-    color: #fff;
+    
     text-align: center;
     line-height: 60px;
     border-radius: 20px;
     margin: 0 auto;
     margin-top: 50px;
     cursor: pointer;
+}
+:local(.konwMore)>a{
+    color: #fff;
 }
 :local(.partnerBox){
     display: flex;
