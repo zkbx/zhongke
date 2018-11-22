@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./index.css"
 import Header from "../../components/header"
-
+import Footer from '../../components/footer'
 
 class Applet extends React.Component {
     constructor(props) {
@@ -213,6 +213,7 @@ class Applet extends React.Component {
 
 
                 </footer>
+                <Footer/>
             </div>
         )
     }

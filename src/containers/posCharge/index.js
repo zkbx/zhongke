@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './index.css'
 import Header from '../../components/header'
+import Footer from '../../components/footer'
 
 class PosCharge extends React.Component {
     constructor(props) {
@@ -129,7 +130,7 @@ class PosCharge extends React.Component {
                         </li>
                         <li className={style.productLi} style={{ backgroundColor: '#99cdf2', color: '#fff' }}>
                             <div className={style.productLiBox}>
-                                <img src={require('./images/product3.png')} className={style.productImg1} alt="" />
+                                <img src={require('./images/product3.png')} className={style.productImg3} alt="" />
                                 <div className={style.productLiFontBox}>
                                     <span className={style.productLiTitle}>
                                         手机收款宝
@@ -172,10 +173,8 @@ class PosCharge extends React.Component {
                                 </div>
                             </div>
                         </li>
-
-                        <li className={style.productLi} style={{}}>
+                        <li className={style.productLi} style={{paddingBottom:0}}>
                             <div className={style.productLiBox}>
-
                                 <div className={style.productLiFontBox}>
                                     <span className={style.productLiTitle}>
                                         超级收款宝Q50
@@ -198,12 +197,13 @@ class PosCharge extends React.Component {
                                         </li>
                                     </ul>
                                 </div>
-                                <img src={require('./images/product4.png')} className={style.productImg2} alt="" />
+                                <img src={require('./images/product4.png')} className={style.productImg4} alt="" />
                             </div>
                         </li>
-                        <li className={style.productLi} style={{ backgroundColor: '#99cdf2', color: '#fff' }}>
+                        <li className={style.productLi} style={{ backgroundColor: '#99cdf2', color: '#fff',paddingBottom:0 }}>
                             <div className={style.productLiBox}>
-                                <img src={require('./images/product5.png')} className={style.productImg1} alt="" />
+                                <img src={require('./images/product5.png')} className={style.productImg5} alt="" />
+                                
                                 <div className={style.productLiFontBox}>
                                     <span className={style.productLiTitle}>
                                         银盛通MPOS
@@ -255,6 +255,7 @@ class PosCharge extends React.Component {
                         </li>
                     </ul>
                 </div>
+                <Footer/>
             </div>
         )
     }

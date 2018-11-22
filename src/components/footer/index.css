@@ -10,6 +10,14 @@
     color: #ededed;
     display: block;
 }
+:local(.footerTitle)>a{
+    font-size: 14px;
+    text-align: center;
+    color: #ededed;
+}
+:local(.footerTitle)>a:hover{
+    text-decoration: underline;
+}
 :local(.footerText){
     font-size: 14px;
     text-align: center;
