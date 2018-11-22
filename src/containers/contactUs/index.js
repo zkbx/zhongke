@@ -2,7 +2,7 @@ import React from 'react';
 import style from './index.css';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
-import { Form, Input, Button,Select } from 'antd';
+import { Form, Button,Select } from 'antd';
 
 const FormItem = Form.Item;
 const Option = Select.Option;

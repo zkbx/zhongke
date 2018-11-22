@@ -2,7 +2,6 @@ import { Menu } from 'antd';
 import React from 'react';
 import style from './index.css'
 import { Link, } from 'react-router-dom'
-import { history} from 'react-router'
 
 
 class App extends React.Component {

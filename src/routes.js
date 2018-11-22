@@ -6,7 +6,7 @@ import PosCharge from './containers/posCharge'
 import ContactUs from './containers/contactUs'
 import AboutUs from './containers/aboutUs'
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
+
 
 export default () => {
     return (

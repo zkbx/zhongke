@@ -36,14 +36,14 @@
     background-color: #fff;
     border-radius: 20px;
     padding: 0 40px;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 :local(.formTitle){
     font-size: 30px;
     color: #000;
     text-align: center;
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 :local(.formText){
     font-size: 20px;
