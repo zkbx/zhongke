@@ -13,14 +13,12 @@ export default () => {
         <HashRouter>
             <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/applet" exact component={Applet} />
-                <Route path="/posCharge" exact component={PosCharge} />
-                <Route path="/contactUs" exact component={ContactUs} />
-                <Route path="/aboutUs" exact component={AboutUs} />
+                <Route path="/applet"  component={Applet} />
+                <Route path="/posCharge"  component={PosCharge} />
+                <Route path="/contactUs"  component={ContactUs} />
+                <Route path="/aboutUs"  component={AboutUs} />
                 <Redirect to="/" />
             </Switch>
         </HashRouter>
-
-
     )
 }

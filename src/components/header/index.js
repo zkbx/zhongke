@@ -19,7 +19,7 @@ class App extends React.Component {
     
     window.onscroll = (e) => { 
       // console.log(document.documentElement.scrollTop);
-      let scrollY=document.documentElement.scrollTop;
+      let scrollY= document.body.scrollTop == 0 ?document.documentElement.scrollTop : document.body.scrollTop;
       
       if(scrollY<700){
         this.setState({
