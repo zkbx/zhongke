@@ -22,7 +22,7 @@ class Home extends React.Component {
         return (
             <div >
                 <Header path={this.props.location.pathname}/>
-                <div style={{width:'100%',height:80}}></div>
+                <div style={{width:'100%',height:'78px'}}></div>
                 <div className={style.banner} alt="" />
                 <div className={style.advantage}>
                     <span className={style.advantageTitle}>

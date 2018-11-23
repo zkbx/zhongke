@@ -10,17 +10,19 @@ class PosCharge extends React.Component {
 
         }
         this.toTop()
+        
     }
 
     toTop(){
         window.scroll(0,0)
     }
-
+   
     render() {
         return (
             <div>
                 <Header  path={this.props.location.pathname}/>
-                <div style={{ width: '100%', height: 80 }}></div>
+                <div style={{ width: '100%', height: '78px' }} ></div>
+
                 <div className={style.banner} alt="" />
                 <div className={style.advantage}>
                     <div className={style.productH}>

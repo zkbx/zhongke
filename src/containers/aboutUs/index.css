@@ -11,7 +11,7 @@
 }
 :local(.productH){
     position: relative;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 :local(.productLine){

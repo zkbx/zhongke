@@ -123,11 +123,3 @@
     text-align: center;
 
 }
-:local(.footer){
-    background-image: url('./images/footer.png');
-    width: 100%;
-    height: 549px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}

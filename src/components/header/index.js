@@ -5,17 +5,38 @@ import { Link, } from 'react-router-dom'
 
 
 class App extends React.Component {
-  constructor(props){
-      super(props)
-      this.state = {
-        current: 'mail',
-      }
-      console.log(this.props.path)
+  constructor(props) {
+    super(props)
+    this.state = {
+      current: 'mail',
+      position:'absolute'
+    }
+    this.onShow()
   }
-  
+
+
+  onShow = () => {
+    
+    window.onscroll = (e) => { 
+      // console.log(document.documentElement.scrollTop);
+      let scrollY=document.documentElement.scrollTop;
+      
+      if(scrollY<700){
+        this.setState({
+          position:'absolute'
+        })
+        return
+      }else{
+        
+        this.setState({
+          position:'flexd'
+        })
+      }
+    }
+  }
 
   handleClick = (e) => {
-    // console.log('click ', e);
+
     this.setState({
       current: e.key,
     });
@@ -23,7 +44,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={style.container}>
+      <div className={style.container+' '+style[this.state.position]}>
         <div className={style.navContent}>
           <img src={require('./images/logo.png')} className={style.logo} alt="" />
           <div className={style.nav}>
@@ -45,11 +66,11 @@ class App extends React.Component {
                 <Link to='/posCharge'>Pos收单</Link>
               </Menu.Item>
               <Menu.Item key="/aboutUs">
-              <Link to='/aboutUs'> 关于我们</Link>
+                <Link to='/aboutUs'> 关于我们</Link>
               </Menu.Item>
               <Menu.Item key="/contactUs">
-              <Link to='/contactUs'>联系我们</Link>
-                </Menu.Item>
+                <Link to='/contactUs'>联系我们</Link>
+              </Menu.Item>
             </Menu>
 
           </div>

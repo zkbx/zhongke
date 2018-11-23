@@ -2,9 +2,20 @@
     width: 100%;
     height: 80px;
     background-color: #fff;
-    position: fixed;
+    position: absolute;
     z-index: 8;
     border-bottom: 1px solid #e4e4e4;
+    transition: all 0.5s;
+}
+:local(.absolute){
+    position: absolute;
+    /* top:-80px; */
+    /* opacity: 0; */
+}
+:local(.flexd){
+    position: fixed;
+    /* top:0;
+    opacity: 1; */
 }
 
 :local(.navContent){
